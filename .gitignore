@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.venv/
+
+# training artifacts
+checkpoints/
+*.npz
+!tests/fixtures/*.npz
+
+# downloaded datasets (data/sample.txt is committed; downloaded corpora are not)
+data/tinyshakespeare/
+data/*.txt.orig
