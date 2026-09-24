@@ -1,0 +1,21 @@
+[project]
+name = "tinyllm-numpy"
+version = "0.1.0"
+description = "A tiny GPT-style language model implemented from scratch with pure NumPy (no PyTorch, hand-written backprop)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+tinyllm-train = "tinyllm.train:main"
+tinyllm-generate = "tinyllm.generate:main"
+
+[tool.setuptools]
+packages = ["tinyllm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
